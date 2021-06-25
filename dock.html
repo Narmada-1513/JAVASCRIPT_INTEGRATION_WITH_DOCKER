@@ -1,1 +1,95 @@
+<head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/b23a20a39d.js" crossorigin="anonymous"></script>
+       
 
+</head>
+<body>
+<div class="hero">
+<div class="navbar">
+<img src="docker3.png" class="logo">
+</div>
+	<div class="content">
+		<small>Containerization Tool</small>
+		<h1>Execute Docker Commands</h1>
+	</div>
+
+
+<div class="login-box">
+   
+    <form>
+      <div class="user-box">
+        <input id="in1" type="text" name="" required="">
+        <label>Docker input</label>
+      </div>
+      <!--<div class="user-box">
+        <input type="password" name="" required="">
+        
+      </div>-->
+      <a onclick="fn()" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Run
+      </a>
+       
+    </form>
+</div>
+
+<nbsp><nbsp><nbsp><nbsp>
+<pre>   
+<div id="d1"> roothost$ OUTPUT</div>
+</pre>
+
+
+
+
+<!-- 
+<div onclick="alert('hi')"> click here to check sync </div>
+<button id="b1" onclick="lw()"> click </button> -->
+<script>
+function fn(){
+
+var i = document.getElementById('in1').value;
+var xhr = new XMLHttpRequest();
+xhr.open("POST","http://192.168.43.161/cgi-bin/back.py?x="+i,true);
+
+xhr.send();
+
+xhr.onload = function(){
+    var output=xhr.responseText;
+    document.getElementById("d1").innerHTML=output;
+}
+}
+
+function fn2(){
+
+i="docker images"
+var xhr = new XMLHttpRequest();
+xhr.open("POST","http://192.168.43.161/cgi-bin/back.py?x="+i,true);
+
+xhr.send();
+
+xhr.onload = function(){
+    var output=xhr.responseText;
+    document.getElementById("d1").innerHTML=output;
+}
+}
+
+</script>
+
+
+
+<!--
+[root@local~#]
+
+</style>
+<div class="search-box">
+            <input id="in1" class="search-txt" type="text" name="" placeholder="Type to search">
+            <a onclick="lw()" class="search-btn" href="#">
+                <i class="fas fa-terminal"></i>
+            </a>
+</div>
+-->
