@@ -54,7 +54,7 @@ function fn(){
 
 var i = document.getElementById('in1').value;
 var xhr = new XMLHttpRequest();
-xhr.open("POST","http://192.168.43.161/cgi-bin/back.py?x="+i,true);
+xhr.open("POST","http://192.168.203.101/cgi-bin/python_cgi.py?x="+i,true);
 
 xhr.send();
 
@@ -68,7 +68,7 @@ function fn2(){
 
 i="docker images"
 var xhr = new XMLHttpRequest();
-xhr.open("POST","http://192.168.43.161/cgi-bin/back.py?x="+i,true);
+xhr.open("POST","http://192.168.203.101/cgi-bin/python_cgi.py?x="+i,true);
 
 xhr.send();
 
