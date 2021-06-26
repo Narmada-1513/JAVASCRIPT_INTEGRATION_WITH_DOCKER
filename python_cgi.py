@@ -7,8 +7,6 @@ import time
 print('Content-type: text/html')
 print()
 
-#print('python file from rhel vm')
-#time.sleep(10)
 
 f=cgi.FieldStorage()
 cmd=f.getvalue('x')
